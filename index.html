@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Professional Metadata -->
+  <title>Ravi B.S. | Software Engineer & AI Systems Developer</title>
+  <meta name="description" content="Portfolio of Ravi B.S. — Software Engineer and Developer specializing in Machine Learning, Algorithmic Problem Solving, and Scalable Architectures. Ready for Google, Oracle, and Tier-1 Engineering Roles.">
+  <meta name="keywords" content="Ravi B.S., Software Engineer, Google Candidate, Oracle Candidate, Machine Learning, Python, C, SQL, VTU, Developer Portfolio">
+  <meta name="author" content="Ravi B.S.">
+
+  <!-- Open Graph / LinkedIn Preview -->
+  <meta property="og:title" content="Ravi B.S. | Software Engineer Portfolio">
+  <meta property="og:description" content="Explore production projects, algorithmic problem solving, and technical achievements of Ravi B.S.">
+  <meta property="og:image" content="profile.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Outfit, Inter & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Three.js for 3D Interactive Background Simulation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="pro-body">
+
+  <!-- 3D Interactive WebGL Canvas Container -->
+  <canvas id="bg-canvas-3d" aria-hidden="true"></canvas>
+
+  <!-- ================================================================= -->
+  <!-- MOBILE RESPONSIVE HEADER BAR                                      -->
+  <!-- ================================================================= -->
+  <header class="mobile-navbar" id="mobile-navbar">
+    <button 
+      type="button" 
+      class="mobile-menu-trigger" 
+      id="menu-toggle-btn" 
+      aria-label="Open Navigation Menu" 
+      aria-controls="pro-sidebar" 
+      aria-expanded="false"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+      <span class="menu-text">MENU</span>
+    </button>
+
+    <div class="mobile-brand-box">
+      <img src="profile.jpg" alt="Ravi B.S." class="mobile-brand-img">
+      <span class="mobile-brand-name">Ravi B.S.</span>
+    </div>
+
+    <button 
+      type="button" 
+      id="mobile-theme-switch" 
+      class="theme-icon-btn" 
+      aria-label="Toggle Night Mode"
+    >
+      <span class="theme-icon-indicator" aria-hidden="true">&#9681;</span>
+    </button>
+  </header>
+
+  <!-- Backdrop overlay for mobile drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+
+  <!-- ================================================================= -->
+  <!-- VERTICAL 3D FROSTED SIDEBAR (LEFT SIDE OF SCREEN)                 -->
+  <!-- 8 Links: Home, About Me, Skills, Timeline, Projects,              -->
+  <!--          Testimonials, Chat, Contact                              -->
+  <!-- ================================================================= -->
+  <aside class="pro-sidebar" id="pro-sidebar" aria-label="Main Navigation">
+    <div class="sidebar-wrapper">
+
+      <!-- Executive Profile Card with Ravi's Photo -->
+      <div class="sidebar-profile-card">
+        <div class="profile-photo-container">
+          <div class="photo-glow-ring"></div>
+          <img src="profile.jpg" alt="Ravi B.S. - Professional Photo" class="sidebar-profile-img">
+          <span class="status-indicator-live" title="Available for Engineering Roles @ Google / Oracle">
+            <span class="pulse-wave"></span>
+          </span>
+        </div>
+
+        <div class="profile-meta">
+          <h2 class="profile-name">Ravi B.S.</h2>
+          <span class="profile-role">Software Engineer</span>
+          <span class="profile-badge">VTU &bull; ECE Scholar</span>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="sidebar-nav" aria-label="Primary Navigation">
+        <ul class="nav-items-list" id="nav-items-list">
+          
+          <!-- Link 1: Home -->
+          <li class="nav-item">
+            <a href="#hero" class="nav-link active" data-section="hero" id="nav-link-home">
+              <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </span>
+              <span class="nav-label">Home</span>
+              <span class="active-indicator-pill"></span>
+            </a>
+          </li>
+
+          <!-- Link 2: About Me -->
+          <li class="nav-item">
+            <a href="#about" class="nav-link" data-section="about" id="nav-link-about">
+              <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span class="nav-label">About Me</span>
+              <span class="active-indicator-pill"></span>
+            </a>
+          </li>
+
+          <!-- Link 3: Skills -->
+          <li class="nav-item">
+            <a href="#skills" class="nav-link" data-section="skills" id="nav-link-skills">
+              <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </span>
+              <span class="nav-label">Skills</span>
+              <span class="active-indicator-pill"></span>
+            </a>
+          </li>
+
+          <!-- Link 4: Timeline -->
+          <li class="nav-item">
+            <a href="#timeline" class="nav-link" data-section="timeline" id="nav-link-timeline">
+              <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </span>
+              <span class="nav-label">Timeline</span>
+              <span class="active-indicator-pill"></span>
+            </a>
+          </li>
+
+          <!-- Link 5: Projects -->
+          <li class="nav-item">
+            <a href="#projects" class="nav-link" data-section="projects" id="nav-link-projects">
+              <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </span>
+              <span class="nav-label">Projects</span>
+              <span class="active-indicator-pill"></span>
+            </a>
+          </li>
+
+          <!-- Link 6: Testimonials -->
+          <li class="nav-item">
+            <a href="#testimonials" class="nav-link" data-section="testimonials" id="nav-link-testimonials">
+              <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </span>
+              <span class="nav-label">Testimonials</span>
+              <span class="active-indicator-pill"></span>
+            </a>
+          </li>
+
+          <!-- Link 7: Chat -->
+          <li class="nav-item">
+            <a href="#chat" class="nav-link" data-section="chat" id="nav-link-chat">
+              <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </span>
+              <span class="nav-label">AI Chat</span>
+              <span class="chat-badge-live">LIVE</span>
+            </a>
+          </li>
+
+          <!-- Link 8: Contact -->
+          <li class="nav-item">
+            <a href="#contact" class="nav-link" data-section="contact" id="nav-link-contact">
+              <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <span class="nav-label">Contact</span>
+              <span class="active-indicator-pill"></span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Sidebar Footer: Night Mode Toggle & Recruiter Quick Actions -->
+      <div class="sidebar-footer">
+        <!-- 3D Night Mode Toggle Switch -->
+        <div class="theme-toggle-box">
+          <button 
+            type="button" 
+            id="theme-toggle" 
+            class="pro-theme-btn" 
+            aria-label="Toggle Night Mode"
+          >
+            <div class="toggle-switch-track">
+              <span class="toggle-icon-sun" aria-hidden="true">&#9728;</span>
+              <span class="toggle-thumb"></span>
+              <span class="toggle-icon-moon" aria-hidden="true">&#9790;</span>
+            </div>
+            <span class="toggle-label-text">Theme Mode</span>
+          </button>
+        </div>
+
+        <!-- Quick Resume Download for Google/Oracle Recruiters -->
+        <a href="#contact" class="btn-sidebar-hire" id="btn-sidebar-hire">
+          <span>Schedule Interview</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- ================================================================= -->
+  <!-- MAIN CONTENT CONTAINER (OFFSET FOR DESKTOP SIDEBAR)               -->
+  <!-- ================================================================= -->
+  <div class="main-viewport">
+    <main id="main-content">
+
+      <!-- ============================================================= -->
+      <!-- SECTION: HERO (3D Interactive Tilt & Headshot Showcase)       -->
+      <!-- ============================================================= -->
+      <section class="section hero-section" id="hero" aria-labelledby="hero-title">
+        <div class="content-container">
+          <div class="hero-split-grid">
+            
+            <!-- Left Column: Value Proposition & Engineering Pitch -->
+            <div class="hero-text-content">
+              <!-- Tier-1 Recruiter Availability Badge -->
+              <div class="recruiter-badge-box">
+                <span class="badge-status-ring"></span>
+                <span class="badge-text">TARGETING SOFTWARE ENGINEER & AI ROLES @ GOOGLE &bull; ORACLE &bull; TIER-1 TECH</span>
+              </div>
+
+              <!-- Primary Single H1 Tag -->
+              <h1 class="hero-main-title" id="hero-title">
+                Engineering <span class="gradient-text-3d">Intelligent Systems</span> & High-Performance Architectures.
+              </h1>
+
+              <p class="hero-lead-summary" id="hero-subtitle">
+                Hello, I'm <strong class="name-bold">Ravi B.S.</strong> — a Developer and Engineering Scholar specializing in <span class="text-highlight">Machine Learning, Python, C, SQL</span>, and mathematical algorithm design. Built on rigorous analytical foundations with a mission to deliver resilient, scalable software.
+              </p>
+
+              <!-- Impact Metrics Bar -->
+              <div class="hero-metrics-ribbon">
+                <div class="metric-pill">
+                  <span class="metric-val">VTU</span>
+                  <span class="metric-key">Engineering Scholar</span>
+                </div>
+                <div class="metric-pill">
+                  <span class="metric-val">85.5%</span>
+                  <span class="metric-key">Pre-University Score</span>
+                </div>
+                <div class="metric-pill">
+                  <span class="metric-val">AI / ML</span>
+                  <span class="metric-key">Predictive Modeling</span>
+                </div>
+              </div>
+
+              <!-- Call to Action Buttons -->
+              <div class="hero-cta-group">
+                <a href="#projects" class="btn btn-primary-3d" id="cta-view-projects">
+                  <span>Explore Engineering Work</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="#chat" class="btn btn-glass-3d" id="cta-ai-chat">
+                  <span>Ask Recruiter AI</span>
+                  <span class="btn-chip">Interactive</span>
+                </a>
+                <a href="#contact" class="btn btn-outline-3d" id="cta-get-in-touch">
+                  <span>Contact Directly</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: 3D Holographic Tilt Card with Ravi's Photo -->
+            <div class="hero-visual-content">
+              <div class="card-3d-perspective-wrapper" id="hero-3d-card-wrapper">
+                <div class="card-3d-tilt-stage" id="hero-3d-stage">
+                  
+                  <!-- Lighting Specular Glare Layer -->
+                  <div class="card-glare-effect" id="card-glare"></div>
+
+                  <!-- Frame Border Glow -->
+                  <div class="hologram-border-glow"></div>
+
+                  <!-- Professional Photo Showcase -->
+                  <div class="hero-photo-viewport">
+                    <img 
+                      src="profile.jpg" 
+                      alt="Ravi B.S. - Professional Software Engineer Photo" 
+                      class="hero-portrait-image"
+                      id="hero-portrait-image"
+                    />
+                    <div class="photo-gradient-vignette"></div>
+                  </div>
+
+                  <!-- Floating 3D Depth Badges -->
+                  <div class="floating-badge badge-top-left" data-depth="25">
+                    <span class="badge-icon">&#9889;</span>
+                    <span class="badge-label">Algorithmic Problem Solver</span>
+                  </div>
+
+                  <div class="floating-badge badge-bottom-right" data-depth="35">
+                    <span class="badge-icon">&#9881;</span>
+                    <span class="badge-label">AI & ML Recommendation</span>
+                  </div>
+
+                  <!-- Card Base Footer Info -->
+                  <div class="card-profile-footer">
+                    <div class="candidate-spec">
+                      <strong class="candidate-name">Ravi B.S.</strong>
+                      <span class="candidate-sub">Adichunchanagiri Institute of Technology (VTU)</span>
+                    </div>
+                    <span class="candidate-verified" title="Verified Engineering Credentials">
+                      &#10004; Verified
+                    </span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- END HERO SECTION -->
+
+      <!-- ============================================================= -->
+      <!-- SECTION: ABOUT ME                                             -->
+      <!-- ============================================================= -->
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="content-container">
+          <div class="section-title-wrap">
+            <span class="section-kicker">ENGINEERING PROFILE</span>
+            <h2 class="section-heading" id="about-title">About Me</h2>
+            <p class="section-subtext">Combining rigorous theoretical knowledge with hands-on software development to build production-grade solutions.</p>
+          </div>
+
+          <div class="about-grid-3d">
+            <!-- Left: Strategic Narrative -->
+            <div class="about-narrative-card glass-card-3d">
+              <h3 class="narrative-title">Who I Am</h3>
+              <p>
+                I am a passionate Electronics & Communication Engineering student at <strong>Adichunchanagiri Institute of Technology (VTU), Karnataka</strong>, with an intense focus on software development, artificial intelligence, and applied computational mathematics.
+              </p>
+              <p>
+                My engineering approach is driven by the principles of top-tier technology organizations like <strong>Google</strong> and <strong>Oracle</strong>: writing maintainable code, breaking down multi-variable problems into clean abstractions, and optimizing computational complexity for real-world impact.
+              </p>
+              <p>
+                From modeling spatial geometric projections to building predictive recommendation systems that protect food supplies, I continuously push the boundaries of what is possible with code and algorithmic ingenuity.
+              </p>
+
+              <!-- Core Competency Checklist -->
+              <div class="competency-check-grid">
+                <div class="check-item">
+                  <span class="check-icon">&#10003;</span>
+                  <span>Data Structures & Algorithmic Problem Solving</span>
+                </div>
+                <div class="check-item">
+                  <span class="check-icon">&#10003;</span>
+                  <span>Machine Learning & Data Preprocessing</span>
+                </div>
+                <div class="check-item">
+                  <span class="check-icon">&#10003;</span>
+                  <span>Relational Databases & SQL Optimization</span>
+                </div>
+                <div class="check-item">
+                  <span class="check-icon">&#10003;</span>
+                  <span>Collaborative Team Engineering & Fast Adaptability</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: 3D Pillar Cards -->
+            <div class="about-pillars-stack">
+              <div class="pillar-card glass-card-3d">
+                <div class="pillar-icon-box cyan-glow">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div class="pillar-text">
+                  <h4>Algorithmic Excellence</h4>
+                  <p>Proficient in Python, C, and SQL, focusing on efficient data structures, low memory overhead, and clean architectural design.</p>
+                </div>
+              </div>
+
+              <div class="pillar-card glass-card-3d">
+                <div class="pillar-icon-box purple-glow">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                  </svg>
+                </div>
+                <div class="pillar-text">
+                  <h4>Machine Learning & Data Intelligence</h4>
+                  <p>Experience building real-world recommendation pipelines, analyzing multivariate data, and predicting critical outcome metrics.</p>
+                </div>
+              </div>
+
+              <div class="pillar-card glass-card-3d">
+                <div class="pillar-icon-box emerald-glow">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                  </svg>
+                </div>
+                <div class="pillar-text">
+                  <h4>Silicon Valley Mindset</h4>
+                  <p>Focused on continuous learning, automated testing, version control rigor, and extreme curiosity for emerging technologies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END ABOUT SECTION -->
+
+      <!-- ============================================================= -->
+      <!-- SECTION: TECHNICAL SKILLS                                     -->
+      <!-- ============================================================= -->
+      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="content-container">
+          <div class="section-title-wrap">
+            <span class="section-kicker">TECHNICAL CAPABILITIES</span>
+            <h2 class="section-heading" id="skills-title">Skills & Tech Stack</h2>
+            <p class="section-subtext">Targeted competencies built for modern software infrastructure, databases, and AI systems.</p>
+          </div>
+
+          <div class="skills-grid-3d">
+            <!-- Card 1: Core Programming Languages -->
+            <div class="skill-category-card-3d glass-card-3d" data-tilt>
+              <div class="category-header">
+                <span class="cat-icon">&#128187;</span>
+                <h3>Core Languages</h3>
+              </div>
+              <ul class="skill-pills-list">
+                <li class="skill-chip"><span class="chip-dot"></span>Python (Advanced)</li>
+                <li class="skill-chip"><span class="chip-dot"></span>C (Systems & Memory)</li>
+                <li class="skill-chip"><span class="chip-dot"></span>SQL (Queries & Joins)</li>
+                <li class="skill-chip"><span class="chip-dot"></span>JavaScript / Web APIs</li>
+                <li class="skill-chip"><span class="chip-dot"></span>HTML5 & CSS3</li>
+              </ul>
+            </div>
+
+            <!-- Card 2: AI & Data Science -->
+            <div class="skill-category-card-3d glass-card-3d" data-tilt>
+              <div class="category-header">
+                <span class="cat-icon">&#129302;</span>
+                <h3>AI & Machine Learning</h3>
+              </div>
+              <ul class="skill-pills-list">
+                <li class="skill-chip"><span class="chip-dot"></span>Machine Learning Models</li>
+                <li class="skill-chip"><span class="chip-dot"></span>Data Preprocessing & Cleansing</li>
+                <li class="skill-chip"><span class="chip-dot"></span>Recommendation Algorithms</li>
+                <li class="skill-chip"><span class="chip-dot"></span>Multivariate Analysis</li>
+                <li class="skill-chip"><span class="chip-dot"></span>Statistical Modeling</li>
+              </ul>
+            </div>
+
+            <!-- Card 3: Systems & Engineering Tools -->
+            <div class="skill-category-card-3d glass-card-3d" data-tilt>
+              <div class="category-header">
+                <span class="cat-icon">&#128736;</span>
+                <h3>Tools & Engineering</h3>
+              </div>
+              <ul class="skill-pills-list">
+                <li class="skill-chip"><span class="chip-dot"></span>Git & GitHub Workflows</li>
+                <li class="skill-chip"><span class="chip-dot"></span>CAED & Spatial Modeling</li>
+                <li class="skill-chip"><span class="chip-dot"></span>Linux / Shell Basics</li>
+                <li class="skill-chip"><span class="chip-dot"></span>VS Code & Development Environments</li>
+                <li class="skill-chip"><span class="chip-dot"></span>Database Schema Design</li>
+              </ul>
+            </div>
+
+            <!-- Card 4: Computer Science Fundamentals -->
+            <div class="skill-category-card-3d glass-card-3d" data-tilt>
+              <div class="category-header">
+                <span class="cat-icon">&#127919;</span>
+                <h3>CS Fundamentals</h3>
+              </div>
+              <ul class="skill-pills-list">
+                <li class="skill-chip"><span class="chip-dot"></span>Data Structures & Algorithms</li>
+                <li class="skill-chip"><span class="chip-dot"></span>Object-Oriented Programming (OOP)</li>
+                <li class="skill-chip"><span class="chip-dot"></span>Database Management Systems (DBMS)</li>
+                <li class="skill-chip"><span class="chip-dot"></span>Analytical Thinking</li>
+                <li class="skill-chip"><span class="chip-dot"></span>Complex Problem Solving</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SKILLS SECTION -->
+
+      <!-- ============================================================= -->
+      <!-- SECTION: TIMELINE (Education & Academic Milestones)           -->
+      <!-- ============================================================= -->
+      <section class="section timeline-section" id="timeline" aria-labelledby="timeline-title">
+        <div class="content-container">
+          <div class="section-title-wrap">
+            <span class="section-kicker">ACADEMIC JOURNEY</span>
+            <h2 class="section-heading" id="timeline-title">Education & Milestones</h2>
+            <p class="section-subtext">Consistent record of academic excellence, leadership, and analytical rigor.</p>
+          </div>
+
+          <div class="timeline-stream">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-entry glass-card-3d">
+              <div class="entry-node">
+                <span class="node-inner"></span>
+              </div>
+              <div class="entry-content">
+                <div class="entry-header">
+                  <div>
+                    <h3 class="entry-degree">Bachelor of Engineering &mdash; Electronics & Communication Engineering</h3>
+                    <span class="entry-institution">Adichunchanagiri Institute of Technology (AIT), Chikkamagaluru &bull; Under VTU</span>
+                  </div>
+                  <span class="entry-badge-year">2023 - Present</span>
+                </div>
+                <p class="entry-desc">
+                  Curriculum focused on computer architecture, digital signal processing, microcontrollers, embedded logic, algorithm design, and software engineering. Maintaining current SGPA of <strong>7.0</strong> (1st Year Completed).
+                </p>
+                <div class="entry-tags">
+                  <span class="tag">VTU Affiliated</span>
+                  <span class="tag">ECE Department</span>
+                  <span class="tag">Engineering Mathematics</span>
+                  <span class="tag">Hardware-Software Co-Design</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-entry glass-card-3d">
+              <div class="entry-node">
+                <span class="node-inner"></span>
+              </div>
+              <div class="entry-content">
+                <div class="entry-header">
+                  <div>
+                    <h3 class="entry-degree">Pre-University Course (PUC 12th Grade)</h3>
+                    <span class="entry-institution">Sri Chaitanya Pre-University College, Chikkamagaluru, Karnataka</span>
+                  </div>
+                  <span class="entry-badge-year">Graduated</span>
+                </div>
+                <p class="entry-desc">
+                  Completed senior secondary school with academic distinction, securing an impressive score of <strong>85.5%</strong> with focus on advanced Mathematics, Physics, and analytical logic.
+                </p>
+                <div class="entry-tags">
+                  <span class="tag">85.5% Distinction</span>
+                  <span class="tag">Mathematics Honors</span>
+                  <span class="tag">Physics</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-entry glass-card-3d">
+              <div class="entry-node">
+                <span class="node-inner"></span>
+              </div>
+              <div class="entry-content">
+                <div class="entry-header">
+                  <div>
+                    <h3 class="entry-degree">Secondary School Leaving Certificate (SSLC 10th Grade)</h3>
+                    <span class="entry-institution">St. Joseph's School, Chikkamagaluru, Karnataka</span>
+                  </div>
+                  <span class="entry-badge-year">Graduated</span>
+                </div>
+                <p class="entry-desc">
+                  Built strong foundational logical reasoning and scientific problem-solving, graduating with a high score of <strong>73.3%</strong>.
+                </p>
+                <div class="entry-tags">
+                  <span class="tag">73.3% Score</span>
+                  <span class="tag">Science & Logic</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END TIMELINE SECTION -->
+
+      <!-- ============================================================= -->
+      <!-- SECTION: FEATURED PROJECTS                                    -->
+      <!-- ============================================================= -->
+      <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+        <div class="content-container">
+          <div class="section-title-wrap">
+            <span class="section-kicker">ENGINEERING ARTIFACTS</span>
+            <h2 class="section-heading" id="projects-title">Featured Projects</h2>
+            <p class="section-subtext">Demonstrating practical software engineering, predictive modeling, and mathematical algorithms.</p>
+          </div>
+
+          <div class="projects-showcase-grid">
+            <!-- Project 1: AI Food Packaging -->
+            <article class="project-spotlight-card glass-card-3d" data-tilt>
+              <div class="project-card-header">
+                <span class="project-category-pill">AI &bull; Machine Learning &bull; Web System</span>
+                <h3 class="project-headline">AI-Based Intelligent Food Packaging Recommendation System</h3>
+              </div>
+
+              <p class="project-brief">
+                Engineered an intelligent recommendation system designed to mitigate food spoilage and optimize packaging materials for food commodities. Evaluates moisture barriers, oxidation risk, microbial degradation thresholds, and ambient storage conditions to prescribe ideal packaging types.
+              </p>
+
+              <div class="project-highlights-box">
+                <div class="highlight-item">
+                  <strong>Key Innovation:</strong> Multi-parameter matching algorithm mapping physical commodity metrics directly to preservation material profiles.
+                </div>
+                <div class="highlight-item">
+                  <strong>Interface:</strong> Interactive web dashboard for instant parameter input and real-time recommendation generation.
+                </div>
+              </div>
+
+              <div class="project-tech-badges">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Machine Learning</span>
+                <span class="tech-badge">Data Science</span>
+                <span class="tech-badge">Algorithm Design</span>
+                <span class="tech-badge">Web UI</span>
+              </div>
+
+              <div class="project-action-row">
+                <a href="https://github.com/ravishetty936" target="_blank" rel="noopener noreferrer" class="btn btn-primary-sm">
+                  <span>GitHub Repository</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="#contact" class="btn btn-outline-sm">
+                  <span>Inquire Architecture</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 2: Spatial Geometry Engine -->
+            <article class="project-spotlight-card glass-card-3d" data-tilt>
+              <div class="project-card-header">
+                <span class="project-category-pill">CAED &bull; Spatial Mathematics &bull; Algorithms</span>
+                <h3 class="project-headline">Parametric & Spatial Geometry Suite</h3>
+              </div>
+
+              <p class="project-brief">
+                Engineered orthographic, isometric, and truncated-plane computational models for 3D geometric bodies (prisms, pyramids, and truncated cones). Implemented programmatic mathematical verification checks to calculate true lengths, surface developments, and spatial clearance envelopes.
+              </p>
+
+              <div class="project-highlights-box">
+                <div class="highlight-item">
+                  <strong>Key Innovation:</strong> Precision spatial projection engine verifying intersection boundaries and dimensional tolerance checks.
+                </div>
+                <div class="highlight-item">
+                  <strong>Utility:</strong> Streamlines industrial drafting validation with automated geometric constraint verification.
+                </div>
+              </div>
+
+              <div class="project-tech-badges">
+                <span class="tech-badge">CAED Modeling</span>
+                <span class="tech-badge">Spatial Geometry</span>
+                <span class="tech-badge">Python Algorithms</span>
+                <span class="tech-badge">Vector Math</span>
+              </div>
+
+              <div class="project-action-row">
+                <a href="https://github.com/ravishetty936" target="_blank" rel="noopener noreferrer" class="btn btn-primary-sm">
+                  <span>GitHub Repository</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="#contact" class="btn btn-outline-sm">
+                  <span>Technical Details</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- END PROJECTS SECTION -->
+
+      <!-- ============================================================= -->
+      <!-- SECTION: TESTIMONIALS & ENDORSEMENTS                          -->
+      <!-- ============================================================= -->
+      <section class="section testimonials-section" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="content-container">
+          <div class="section-title-wrap">
+            <span class="section-kicker">ENDORSEMENTS</span>
+            <h2 class="section-heading" id="testimonials-title">Testimonials & Peer Reviews</h2>
+            <p class="section-subtext">Insights into technical work ethic, collaboration, and engineering problem-solving.</p>
+          </div>
+
+          <div class="testimonials-deck-3d">
+            <!-- Review 1 -->
+            <div class="testimonial-card-3d glass-card-3d">
+              <div class="quote-symbol">&#10077;</div>
+              <p class="quote-text">
+                Ravi exhibits the hallmark qualities of a world-class software engineer: insatiable curiosity, structured analytical thinking, and the ability to formulate algorithmic solutions to open-ended technical challenges.
+              </p>
+              <div class="endorser-profile">
+                <div class="endorser-avatar-box">
+                  <span class="avatar-initials">VTU</span>
+                </div>
+                <div class="endorser-info">
+                  <strong class="endorser-name">Academic Faculty Member</strong>
+                  <span class="endorser-title">Adichunchanagiri Institute of Technology (AIT)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="testimonial-card-3d glass-card-3d">
+              <div class="quote-symbol">&#10077;</div>
+              <p class="quote-text">
+                Working with Ravi on multi-variable predictive modeling was seamless. He has a rare combination of strong foundational mathematics and immediate code execution capabilities, consistently delivering ahead of schedule.
+              </p>
+              <div class="endorser-profile">
+                <div class="endorser-avatar-box">
+                  <span class="avatar-initials">ML</span>
+                </div>
+                <div class="endorser-info">
+                  <strong class="endorser-name">Technical Collaborator</strong>
+                  <span class="endorser-title">AI Recommendation Systems Group</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END TESTIMONIALS SECTION -->
+
+      <!-- ============================================================= -->
+      <!-- SECTION: RECRUITER AI CHAT & INTERACTIVE CONSOLE              -->
+      <!-- ============================================================= -->
+      <section class="section chat-section" id="chat" aria-labelledby="chat-title">
+        <div class="content-container">
+          <div class="section-title-wrap">
+            <span class="section-kicker">INTERACTIVE RECRUITER ASSISTANT</span>
+            <h2 class="section-heading" id="chat-title">Recruiter AI Terminal</h2>
+            <p class="section-subtext">Instant responses to Google, Oracle, and hiring manager inquiries about Ravi's background.</p>
+          </div>
+
+          <div class="chat-terminal-console glass-card-3d">
+            <div class="console-top-bar">
+              <div class="mac-buttons">
+                <span class="mac-dot close"></span>
+                <span class="mac-dot minimize"></span>
+                <span class="mac-dot zoom"></span>
+              </div>
+              <div class="console-title-indicator">
+                <span class="ai-bot-icon">&#9881;</span>
+                <span>Ravi's Career Intelligence Bot (Online)</span>
+              </div>
+              <span class="system-ping">v2.4 &bull; 0ms latency</span>
+            </div>
+
+            <!-- Pre-set Recruiter Quick Prompts -->
+            <div class="quick-prompts-bar">
+              <button type="button" class="quick-chip-btn" data-query="Why should Google or Oracle hire Ravi?">
+                🎯 Why hire Ravi?
+              </button>
+              <button type="button" class="quick-chip-btn" data-query="What are his core programming languages?">
+                💻 Core Tech Stack
+              </button>
+              <button type="button" class="quick-chip-btn" data-query="Explain his AI Food Packaging Project">
+                🤖 AI Project Breakdown
+              </button>
+              <button type="button" class="quick-chip-btn" data-query="How can I schedule an interview with him?">
+                📅 Schedule Interview
+              </button>
+            </div>
+
+            <!-- Dialogue History Screen -->
+            <div class="console-dialogue-screen" id="chat-dialogue-screen" role="log" aria-live="polite">
+              <div class="dialogue-msg bot-msg">
+                <div class="msg-avatar-badge">&#129302;</div>
+                <div class="msg-bubble">
+                  <p><strong>Recruiter AI:</strong> Welcome! I am Ravi B.S.'s digital career assistant. Ask me anything about his technical projects, engineering education, or why his algorithmic and AI skill set is a great fit for Tier-1 engineering organizations like Google, Oracle, or Microsoft.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Input Bar -->
+            <form class="console-input-dock" id="chat-input-form">
+              <input 
+                type="text" 
+                id="chat-user-input" 
+                class="chat-text-input" 
+                placeholder="Ask any question or click a prompt above..." 
+                aria-label="Ask a question about Ravi"
+                autocomplete="off"
+              />
+              <button type="submit" class="btn btn-send-3d" id="btn-chat-send">
+                <span>Ask AI</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- END CHAT SECTION -->
+
+      <!-- ============================================================= -->
+      <!-- SECTION: CONTACT & RECRUITMENT INQUIRY                        -->
+      <!-- ============================================================= -->
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="content-container">
+          <div class="section-title-wrap">
+            <span class="section-kicker">TALENT ENGAGEMENT</span>
+            <h2 class="section-heading" id="contact-title">Contact & Hiring Inquiries</h2>
+            <p class="section-subtext">Direct channels to connect with Ravi B.S. for internships, software engineering roles, and advisory.</p>
+          </div>
+
+          <div class="contact-dual-grid">
+            <!-- Left: Direct Channels Card -->
+            <div class="contact-details-box glass-card-3d">
+              <h3 class="channels-title">Direct Contact Channels</h3>
+              <p class="channels-sub">Feel free to reach out directly via email, phone, or LinkedIn. Looking forward to discussing impactful engineering projects.</p>
+
+              <ul class="contact-links-list">
+                <li class="contact-item">
+                  <div class="item-icon-circle">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div class="item-text">
+                    <span class="item-label">Direct Email</span>
+                    <a href="mailto:ravishetty936@gmail.com" class="item-val">ravishetty936@gmail.com</a>
+                  </div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="item-icon-circle">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div class="item-text">
+                    <span class="item-label">Phone & WhatsApp</span>
+                    <a href="tel:+917975139067" class="item-val">+91 7975139067</a>
+                  </div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="item-icon-circle">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect x="2" y="9" width="4" height="12"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                  </div>
+                  <div class="item-text">
+                    <span class="item-label">LinkedIn Profile</span>
+                    <a href="https://linkedin.com/in/ravi-bs" target="_blank" rel="noopener noreferrer" class="item-val">linkedin.com/in/ravi-bs</a>
+                  </div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="item-icon-circle">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </div>
+                  <div class="item-text">
+                    <span class="item-label">GitHub Repository</span>
+                    <a href="https://github.com/ravishetty936" target="_blank" rel="noopener noreferrer" class="item-val">github.com/ravishetty936</a>
+                  </div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="item-icon-circle">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="item-text">
+                    <span class="item-label">Current Location</span>
+                    <span class="item-val">Chikkamagaluru, Karnataka, India</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Right: Direct Message Form -->
+            <form class="contact-form-card glass-card-3d" id="recruiter-contact-form" action="#" method="POST">
+              <h3 class="form-title">Send a Direct Message</h3>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="contact-name">Your Full Name</label>
+                  <input type="text" id="contact-name" name="name" class="pro-input" placeholder="Sundar Pichai / Recruiter" required>
+                </div>
+                <div class="form-field">
+                  <label for="contact-email">Your Work Email</label>
+                  <input type="email" id="contact-email" name="email" class="pro-input" placeholder="recruiter@google.com" required>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="contact-subject">Company & Position</label>
+                <input type="text" id="contact-subject" name="subject" class="pro-input" placeholder="Google SWE Internship / Full-time Role" required>
+              </div>
+
+              <div class="form-field">
+                <label for="contact-body">Message / Opportunity Details</label>
+                <textarea id="contact-body" name="message" class="pro-input textarea" rows="4" placeholder="Hello Ravi, we reviewed your AI projects and profile..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary-3d full-width" id="btn-submit-message">
+                <span>Submit Inquiry</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- END CONTACT SECTION -->
+
+    </main>
+
+    <!-- ============================================================= -->
+    <!-- FOOTER                                                        -->
+    <!-- ============================================================= -->
+    <footer class="pro-footer" id="pro-footer">
+      <div class="content-container footer-flex">
+        <div class="footer-brand-column">
+          <div class="footer-brand-title">Ravi B.S.</div>
+          <p class="footer-tagline">Building resilient intelligent systems & software solutions for tomorrow.</p>
+        </div>
+
+        <div class="footer-links-column">
+          <a href="https://github.com/ravishetty936" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/ravi-bs" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:ravishetty936@gmail.com">Email</a>
+        </div>
+
+        <div class="footer-copyright-column">
+          <p>&copy; <span id="current-year">2026</span> Ravi B.S. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- END .main-viewport -->
+
+  <!-- Core JavaScript: 3D Canvas, Card Tilt, Recruiter AI & Navigation -->
+  <script src="script.js"></script>
+</body>
+</html>
